@@ -1,0 +1,11 @@
+:root {
+  body {
+    font-family: var(--ff-primary);
+    font-size: var(--body-text-size);
+    color: var(--font-dark-grey);
+
+    &.hide-scrollbars {
+      overflow: hidden;
+    }
+  }
+}

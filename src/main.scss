@@ -1,0 +1,121 @@
+@use "./style/reset.scss";
+@use "./style/font.scss";
+@use "./style/base.scss";
+@use "./style/focus.scss";
+@use "./style/variables/variables.scss";
+@use "./style/variables/typography.scss";
+@use "./style/variables/buttons.scss";
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding-inline: 24px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+
+  svg {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.layout-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  padding: 24px;
+  background-color: var(--bg-grey);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+
+  &.checked {
+    border-color: var(--copper);
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.users-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  align-items: start;
+
+  @media (max-width: 575px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-list-item {
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-grey);
+  }
+
+  &.selected {
+    background-color: var(--bg-grey);
+    border-color: var(--copper);
+  }
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-avatar {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--copper);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.user-badge-name {
+  font-size: var(--small-heading-size);
+}
+
+.user-badge-email {
+  color: var(--font-grey);
+}

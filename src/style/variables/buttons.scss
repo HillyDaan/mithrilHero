@@ -1,0 +1,65 @@
+[class*="btn-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-inline: 24px;
+  height: 48px;
+  border-radius: 8px;
+  font-size: var(--body-text-size);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  transition: background-color var(--transition);
+
+  > svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--copper);
+
+  &:hover {
+    background-color: var(--dark-copper);
+  }
+
+  &:disabled {
+    background-color: color-mix(in srgb, var(--copper) 30%, var(--white));
+    cursor: not-allowed;
+  }
+
+  &.green {
+    background-color: var(--green);
+
+    &:hover {
+      background-color: var(--dark-green);
+    }
+
+    &:disabled {
+      background-color: color-mix(in srgb, var(--green) 30%, var(--white));
+    }
+  }
+}
+
+.btn-secondary {
+  color: var(--copper);
+  border: 1px solid var(--copper);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--copper) 20%, transparent);
+  }
+
+  &.green {
+    color: var(--green);
+    border-color: var(--green);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--green) 20%, transparent);
+    }
+  }
+}

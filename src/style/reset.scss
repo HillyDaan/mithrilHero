@@ -1,0 +1,169 @@
+:root {
+  --font-factor: 1;
+  --font-size: 62.5%;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*:where(a, button):not([disabled]) {
+  cursor: pointer;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: calc(var(--font-size) * var(--font-factor)); // For rem
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  // scrollbar-gutter: stable;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  height: auto;
+}
+
+main {
+  min-height: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  font-style: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font-weight: 400;
+  font-size: 1.6rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 0;
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus-visible,
+input:-webkit-autofill:active {
+  transition: background-color 5000s 0s ease-in-out;
+}
+
+textarea {
+  resize: vertical;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  // -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern";
+  -moz-font-feature-settings: "liga", "kern";
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  color: inherit;
+}
+
+fieldset {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+svg {
+  overflow: hidden;
+  height: auto;
+  width: auto;
+}
+
+::placeholder {
+  opacity: 1;
+  font-size: 1.4rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  display: block;
+
+  > img {
+    width: auto;
+  }
+}

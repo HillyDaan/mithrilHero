@@ -1,0 +1,65 @@
+:root {
+  --blue: #004c99;
+  --dark-blue: #002755;
+  --copper: #CA5B29;
+  --dark-copper: #B04F24;
+  --grey: #596c7e;
+  --green: #97a78c;
+  --dark-green: #7f8c76;
+  --light-green: #eff4ee;
+
+  --bg-dark-beige: #e7e8e1;
+  --bg-grey: #f7f8fa;
+  --bg-beige: #f7f6f5;
+
+  --border-color: #e0e5ea;
+  --border-color-2: #dfe5eb;
+
+  --font-dark-blue: #0b2652;
+  --font-dark-grey: #443e35;
+  --font-grey: #6f6a62;
+  --font-light-blue: #d1e3f4;
+
+  --white: #ffffff;
+
+  --disabled-menu: #596b7e;
+
+  // Fonts
+  // --------------------------
+
+  --ff-primary: "Noto Sans", sans-serif;
+  --ff-secondary: "Apertura", sans-serif;
+
+  // Font sizes
+  // --------------------------
+
+  --heading-size: clamp(4rem, 4vw, 4.8rem);
+  --subtitle-size: clamp(1.6rem, 3vw, 1.8rem);
+  --medium-heading-size: clamp(2rem, 4vw, 2.8rem);
+  --small-heading-size: clamp(1.8rem, 3vw, 2rem);
+
+  --body-text-size: clamp(1.4rem, 1vw, 1.6rem);
+  --small-text-size: clamp(1.2rem, 1vw, 1.4rem);
+
+  --tiny-text-size: 1.2rem;
+
+  // Transitions
+  // --------------------------
+
+  --transition-duration: 0.2s;
+  --transition: var(--transition-duration) ease-in-out;
+
+  // Z-index
+  // --------------------------
+
+  --z-index-1: 5;
+  --z-index-2: 10;
+  --z-index-3: 15;
+  --z-index-4: 20;
+  --z-index-5: 25;
+  --z-index-6: 30;
+  --z-index-7: 35;
+  --z-index-8: 40;
+  --z-index-9: 45;
+  --z-index-10: 50;
+}

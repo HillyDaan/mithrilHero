@@ -1,0 +1,37 @@
+.fs1 {
+  font-family: var(--ff-secondary);
+  font-size: var(--heading-size);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2%;
+  color: var(--blue);
+}
+
+.fs2 {
+  font-size: var(--medium-heading-size);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--font-dark-blue);
+}
+
+.fs3 {
+  font-size: var(--small-heading-size);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--font-dark-blue);
+}
+
+.subtitle {
+  font-size: var(--subtitle-size);
+  line-height: 1.5;
+  color: var(--font-grey);
+}
+
+p {
+  font-size: var(--body-text-size);
+  line-height: 1.5;
+
+  strong {
+    font-weight: 700;
+  }
+}

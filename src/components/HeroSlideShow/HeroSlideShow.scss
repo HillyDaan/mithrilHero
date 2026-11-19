@@ -1,0 +1,122 @@
+/* Whole slideshow, all slides are stacked inside this */
+.HeroSlideShow {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    background: #111111;
+    color: #ffffff;
+}
+
+/* One slide, hidden by default (fade speed is set inline from slideDuration) */
+.HeroSlideShowItem {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+
+/* The slide that is currently shown */
+.HeroSlideShowItemActive {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+/* Text block at the bottom of a slide */
+.HeroSlideShowText {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4rem 2rem 4.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+/* Slide title */
+.HeroSlideShowTitle {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+}
+
+/* Slide description */
+.HeroSlideShowDescription {
+    max-width: 40rem;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+/* Call-to-action button */
+.HeroSlideShowCta {
+    padding: 0.625rem 1.25rem;
+    border: 0;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #111111;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.HeroSlideShowCta:hover {
+    background: #e6e6e6;
+}
+
+/* Bar with arrows, dots and counter */
+.HeroSlideShowControls {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transform: translateX(-50%);
+}
+
+/* Previous / next buttons */
+.HeroSlideShowArrow {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.HeroSlideShowArrow:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Row of dots */
+.HeroSlideShowDots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* One dot */
+.HeroSlideShowDot {
+    width: 0.625rem;
+    height: 0.625rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+/* Dot of the slide that is shown */
+.HeroSlideShowDotActive {
+    background: #ffffff;
+}
+
+/* "2 / 5" text */
+.HeroSlideShowCounter {
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+}

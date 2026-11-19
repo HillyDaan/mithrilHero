@@ -1,0 +1,14 @@
+button,
+a,
+div {
+  &:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+    z-index: var(--z-index-10);
+    border-radius: 3px;
+
+    &.focus-white {
+      outline: 2px solid var(--white);
+    }
+  }
+}
